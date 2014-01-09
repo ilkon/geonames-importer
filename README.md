@@ -11,11 +11,11 @@ Usage
 
 The basics of this script are quite simple:
 
-```bash
+```sh
 importer.sh [OPTIONS] <action>
 ```
 
-Where <action> can be one of the following:
+Where **\<action\>** can be one of the following:
 
 * `init` --- initializes local MySQL database
 * `import` --- downloads geonames data and imports them into local database
@@ -23,8 +23,8 @@ Where <action> can be one of the following:
 
 Options are:
 
-* `-u <user>` --- Username to access database
-* `-p <password>` --- User password to access database
+* `-u <user>` --- username to access database
+* `-p <password>` --- user password to access database
 * `-h <host>` --- MySQL server address (default: `localhost`)
 * `-r <port>` --- MySQL server port (default: `3306`)
 * `-n <database>` --- MySQL database name (default: `geonames`)
@@ -35,19 +35,19 @@ Examples
 
 Tp create local database `geonames`:
 
-```bash
+```sh
 importer.sh -u root -p ROOT_PASSWORD init
 ```
 
 To import geonames data into local `geonames` database:
 
-```bash
+```sh
 importer.sh -u geouser -p GEOUSER_PASSWORD import
 ```
 
 To apply yesterday's changes in geonames.org to local database `geonames`:
 
-```bash
+```sh
 importer.sh -u geouser -p GEOUSER_PASSWORD update
 ```
 
