@@ -1,5 +1,5 @@
-Geonames database importer (MySQL version)
-==========================================
+Geonames database importer (MySQL)
+==================================
 
 As it's stated on their [site](http://www.geonames.org/), GeoNames geographical database covers all countries and contains over eight million placenames that are available for download free of charge. This database is available for download free of charge under a creative commons attribution license.
 
@@ -55,4 +55,4 @@ importer.sh -u geouser -p GEOUSER_PASSWORD update
 License
 -------
 
-**Geonames database importer** is Copyright © 2014 Ilya Konyukhov. It is free software and may be redistributed under the terms specified in the MIT-LICENSE file.
+**Geonames database importer** is Copyright © 2014 Ilya Konyukhov. It is free software and may be redistributed under the terms specified in the [LICENSE](https://github.com/ilkon/geonames-mysql-importer/blob/master/LICENSE) file.
