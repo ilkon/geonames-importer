@@ -112,6 +112,8 @@ update() {
 }
 
 # Main procedure
+cd "$( dirname "$0" )"
+
 while getopts "u:p:h:r:n:" opt; do
     case $opt in
         u) DB_USERNAME=$OPTARG ;;
