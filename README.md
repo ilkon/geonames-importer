@@ -1,13 +1,12 @@
-Geonames database importer (MySQL)
-==================================
+# Geonames database importer
 
-As it's stated on their [site](http://www.geonames.org/), GeoNames geographical database covers all countries and contains over eight million placenames that are available for download free of charge. This database is available for download free of charge under a creative commons attribution license.
+As it's stated on their [site](http://www.geonames.org/), GeoNames geographical database covers all countries and contains over eight million placenames. This database is available for download free of charge under a creative commons attribution license.
 
-This importer script downloads all the tables available on Geonames.org and imports them into local MySQL database. Also it can be used to keep local database up to date by synchronizing it with Geonames.org. When running with a special option it downloads daily diff's and applies them to current database.
+This script downloads all the tables available on Geonames.org and imports them into local database. Also it can be used to keep local database up to date by synchronizing it with Geonames.org. When running with a special option it downloads daily diff's and applies them to current database.
 
+The script supports MySQL and PostgreSQL databases.
 
-Usage
------
+## Usage
 
 The basics of this script are quite simple:
 
@@ -29,9 +28,7 @@ Options are:
 * `-r <port>` --- MySQL server port (default: `3306`)
 * `-n <database>` --- MySQL database name (default: `geonames`)
 
-
-Examples
---------
+## Examples
 
 Tp create local database `geonames`:
 
@@ -51,8 +48,6 @@ To apply yesterday's changes in geonames.org to local database `geonames`:
 importer.sh -u geouser -p GEOUSER_PASSWORD update
 ```
 
+## License
 
-License
--------
-
-**Geonames database importer** is Copyright © 2014 Ilya Konyukhov. It is free software and may be redistributed under the terms specified in the [LICENSE](https://github.com/ilkon/geonames-mysql-importer/blob/master/LICENSE) file.
+**Geonames database importer** is Copyright © 2014-2016 Ilya Konyukhov. It is free software and may be redistributed under the terms specified in the [LICENSE](https://github.com/ilkon/geonames-importer/blob/master/LICENSE) file.
