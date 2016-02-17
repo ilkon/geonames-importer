@@ -11,35 +11,45 @@ The script supports MySQL and PostgreSQL databases.
 The basics of this script are quite simple:
 
 ```sh
+cd mysql
 importer.sh [OPTIONS] <action>
 ```
 
 Where **\<action\>** can be one of the following:
 
-* `init` --- initializes local MySQL database
-* `import` --- downloads geonames data and imports them into local database
+* `drop` --- drops database
+* `create` --- creates empty database
+* `migrate` --- creates structure of local geonames database
+* `seed` --- downloads geonames data and imports them into local database
+* `reset` --- resets geonames database and import data
 * `update` --- updates database (usually should run daily by cron)
 
 Options are:
 
+* `-h <host>` --- database server address (default: `localhost`)
+* `-r <port>` --- database server port (default: `3306`)
+* `-d <database>` --- database name (default: `geonames`)
 * `-u <user>` --- username to access database
 * `-p <password>` --- user password to access database
-* `-h <host>` --- MySQL server address (default: `localhost`)
-* `-r <port>` --- MySQL server port (default: `3306`)
-* `-n <database>` --- MySQL database name (default: `geonames`)
 
 ## Examples
 
-Tp create local database `geonames`:
+To create local database `geonames`:
 
 ```sh
-importer.sh -u root -p ROOT_PASSWORD init
+importer.sh -u root -p ROOT_PASSWORD create
+```
+
+To prepare local database `geonames` (create empty tables) :
+
+```sh
+importer.sh -u geouser -p GEOUSER_PASSWORD migrate
 ```
 
 To import geonames data into local `geonames` database:
 
 ```sh
-importer.sh -u geouser -p GEOUSER_PASSWORD import
+importer.sh -u geouser -p GEOUSER_PASSWORD seed
 ```
 
 To apply yesterday's changes in geonames.org to local database `geonames`:
