@@ -1,3 +1,5 @@
+SET search_path TO geonames;
+
 -- all countries combined in one file, see 'geoname' table for columns
 DROP TABLE IF EXISTS names;
 CREATE TABLE names (
