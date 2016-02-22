@@ -4,7 +4,7 @@ CREATE TABLE names (
   name_id INT PRIMARY KEY,          -- integer id of record in geonames database
   name VARCHAR(200),                -- name of geographical point (utf8) varchar(200)
   ascii_name VARCHAR(200),          -- name of geographical point in plain ascii characters, varchar(200)
-  alternate_names VARCHAR(5000),    -- alternatenames, comma separated varchar(5000)
+  alternate_names VARCHAR(5000),    -- alternate names, comma separated varchar(5000)
   latitude DECIMAL(10,7),           -- latitude in decimal degrees (wgs84)
   longitude DECIMAL(10,7),          -- longitude in decimal degrees (wgs84)
   feature_class CHAR(1),            -- see http://www.geonames.org/export/codes.html, char(1)
