@@ -40,7 +40,7 @@ create() {
 
 drop_schema() {
     printf >&2 "Dropping schema '$DB_SCHEMA'...\n"
-    db_sql "DROP SCHEMA IF EXISTS $DB_SCHEMA;"
+    db_sql "DROP SCHEMA IF EXISTS $DB_SCHEMA CASCADE;"
     printf >&2 "done\n"
 }
 
